@@ -1,10 +1,7 @@
-# LearnTo iOS - Week 4
+# LearnTo iOS - Week 5
 
-App Navigation & Gestures
+Networking
 
 # Find out about:
-* Navigation Controllers
-* Modal Presentation
-* Tab Bar Navigation
-* Gesture Recognisers
-* Alert Controllers
+* Networking - making calls to services
+* Web Views (WKWebView and SFSafariViewController)
