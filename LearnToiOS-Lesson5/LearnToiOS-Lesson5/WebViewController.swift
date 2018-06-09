@@ -14,6 +14,6 @@ class WebViewController: UIViewController {
     @IBOutlet weak var webView: WKWebView!
 
     override func viewDidLoad() {
-        print(url)
+        webView.loadHTMLString(url, baseURL: nil)
     }
 }

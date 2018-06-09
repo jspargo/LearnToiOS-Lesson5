@@ -49,7 +49,8 @@ class DetailViewController: UIViewController {
       destinationVC.selectedIndexPath = selectedIndexPath
     }
     if let destinationVC = segue.destination as? WebViewController {
-        destinationVC.url = modelController.pageForItem(at: indexPath.row)
+        guard let selectedIndexPathRow = selectedIndexPath?.row else { return }
+        destinationVC.url = modelController.pageForItem(at: selectedIndexPathRow)
     }
   }
 }
