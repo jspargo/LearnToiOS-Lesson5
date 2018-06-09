@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0415A54920CBEBC500E4408D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0415A54720CBEBC400E4408D /* Main.storyboard */; };
 		0415A54D20CC25A800E4408D /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0415A54C20CC25A800E4408D /* Network.swift */; };
+		0415A54F20CC861B00E4408D /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0415A54E20CC861B00E4408D /* WebViewController.swift */; };
 		DB91971D20C5789A00DDD57F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB91971C20C5789A00DDD57F /* AppDelegate.swift */; };
 		DB91971F20C5789A00DDD57F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB91971E20C5789A00DDD57F /* ViewController.swift */; };
 		DB91972420C5789C00DDD57F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB91972320C5789C00DDD57F /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		0415A54820CBEBC400E4408D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
 		0415A54C20CC25A800E4408D /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		0415A54E20CC861B00E4408D /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		DB91971920C5789A00DDD57F /* LearnToiOS-Lesson5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LearnToiOS-Lesson5.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB91971C20C5789A00DDD57F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB91971E20C5789A00DDD57F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				DB91973A20C5F5F300DDD57F /* RecentsTableViewController.swift */,
 				DB91973820C5F01200DDD57F /* AvatarViewController.swift */,
 				DB91973620C5EC5100DDD57F /* DetailViewController.swift */,
+				0415A54E20CC861B00E4408D /* WebViewController.swift */,
 			);
 			path = "LearnToiOS-Lesson5";
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 				DB91971D20C5789A00DDD57F /* AppDelegate.swift in Sources */,
 				0415A54D20CC25A800E4408D /* Network.swift in Sources */,
 				DB91973720C5EC5100DDD57F /* DetailViewController.swift in Sources */,
+				0415A54F20CC861B00E4408D /* WebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

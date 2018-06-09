@@ -58,6 +58,13 @@ class ModelController: NSObject {
     
     return urlString
   }
+
+    func pageForItem(at row: Int) -> String {
+        let item = self.item(at: row)
+        let urlString = item["clone_url"] as! String
+
+        return urlString
+    }
   
   func imageOfItem(at row: Int) -> UIImage? {
     let image: UIImage?

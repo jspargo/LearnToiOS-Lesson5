@@ -18,7 +18,8 @@ class DetailViewController: UIViewController {
   @IBOutlet weak var urlLabel: UILabel!
   @IBOutlet weak var sourceTypeLabel: UILabel!
   @IBOutlet weak var avatarImageView: UIImageView!
-  
+  @IBOutlet weak var gitHubButton: UIButton!
+
   override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -29,6 +30,7 @@ class DetailViewController: UIViewController {
       self.descriptionLabel.text = modelController.descriptionOfItem(at: indexPath.row)
       self.urlLabel.text = modelController.urlStringOfItem(at: indexPath.row)
       self.sourceTypeLabel.text = modelController.isPrivateItem(at: indexPath.row) ? "Closed Source" : " OpenSource"
+      self.gitHubButton.titleLabel?.text = modelController.pageForItem(at: indexPath.row)
       
       modelController.loadAvatarImageOfItem(at: indexPath.row) { (image, _) in
         self.avatarImageView.image = image
@@ -44,9 +46,10 @@ class DetailViewController: UIViewController {
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     
     if let destinationVC = segue.destination as? AvatarViewController {
-      
       destinationVC.selectedIndexPath = selectedIndexPath
     }
+    if let destinationVC = segue.destination as? WebViewController {
+        destinationVC.url = modelController.pageForItem(at: indexPath.row)
+    }
   }
-  
 }
