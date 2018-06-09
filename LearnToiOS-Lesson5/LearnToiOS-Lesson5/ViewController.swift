@@ -10,13 +10,15 @@ import UIKit
 
 class ViewController: UITableViewController {
 
-  let modelController = ModelController.shared
+    let modelController = ModelController.shared
 
     override func viewDidLoad() {
         Network().getData { (data) in
             let jsonObject = try! JSONSerialization.jsonObject(with: data, options: .allowFragments) as! [AnyHashable: Any]
             self.modelController.items = jsonObject["items"] as! [[AnyHashable: Any]]
-            self.tableView.reloadData()
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
         }
     }
   
