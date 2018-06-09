@@ -13,8 +13,10 @@ class ViewController: UITableViewController {
   let modelController = ModelController.shared
 
     override func viewDidLoad() {
-        Network().getData { (dataString) in
-            print(dataString)
+        Network().getData { (data) in
+            let jsonObject = try! JSONSerialization.jsonObject(with: data, options: .allowFragments) as! [AnyHashable: Any]
+            self.modelController.items = jsonObject["items"] as! [[AnyHashable: Any]]
+            self.tableView.reloadData()
         }
     }
   
