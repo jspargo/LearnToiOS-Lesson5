@@ -11,6 +11,12 @@ import UIKit
 class ViewController: UITableViewController {
 
   let modelController = ModelController.shared
+
+    override func viewDidLoad() {
+        Network().getData { (dataString) in
+            print(dataString)
+        }
+    }
   
   override func numberOfSections(in tableView: UITableView) -> Int {
     return 1

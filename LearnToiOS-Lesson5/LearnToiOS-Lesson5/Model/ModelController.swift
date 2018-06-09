@@ -14,14 +14,9 @@ class ModelController: NSObject {
 
   private override init() {
     NSLog("ModelController is up and running")
-
-    let jsonData = jsonString.data(using: .utf8)!
-    let jsonObject = try! JSONSerialization.jsonObject(with: jsonData, options: .allowFragments) as! [AnyHashable: Any]
-    self.items = jsonObject["items"] as! [[AnyHashable: Any]]
-    
   }
   
-  var items: [[AnyHashable: Any]]
+  var items: [[AnyHashable: Any]] = []
   
   var itemCount: Int {
     return self.items.count
