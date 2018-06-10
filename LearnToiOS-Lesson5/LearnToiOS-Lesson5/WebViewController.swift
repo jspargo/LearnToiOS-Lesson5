@@ -14,6 +14,11 @@ class WebViewController: UIViewController {
     @IBOutlet weak var webView: WKWebView!
 
     override func viewDidLoad() {
-        webView.loadHTMLString(url, baseURL: nil)
+//        if let url = URL(string: url) {
+//            let request = URLRequest(url: url)
+//            webView.load(request)
+//        }
+        let htmlString = "<h1>Hello World!</h2><marquee>LearnTo iOS - Lesson 5</marquee>"
+        webView.loadHTMLString(htmlString, baseURL: nil)
     }
 }

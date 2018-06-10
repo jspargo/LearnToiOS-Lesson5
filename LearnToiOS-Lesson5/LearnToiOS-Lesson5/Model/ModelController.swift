@@ -61,7 +61,7 @@ class ModelController: NSObject {
 
     func pageForItem(at row: Int) -> String {
         let item = self.item(at: row)
-        let urlString = item["clone_url"] as! String
+        let urlString = item["html_url"] as! String
 
         return urlString
     }
