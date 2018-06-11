@@ -10,7 +10,17 @@ import UIKit
 
 class ViewController: UITableViewController {
 
-  let modelController = ModelController.shared
+    let modelController = ModelController.shared
+
+    override func viewDidLoad() {
+        Network().getData { (data) in
+            let jsonObject = try! JSONSerialization.jsonObject(with: data, options: .allowFragments) as! [AnyHashable: Any]
+            self.modelController.items = jsonObject["items"] as! [[AnyHashable: Any]]
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
   
   override func numberOfSections(in tableView: UITableView) -> Int {
     return 1
